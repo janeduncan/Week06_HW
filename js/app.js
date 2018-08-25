@@ -71,12 +71,12 @@ const buildList = function(camera){
 }
 
 const renderList = function(){
-    const readingDiv = document.querySelector('#camera-list');
-    readingDiv.innerHTML = "";
+    const cameraDiv = document.querySelector('#camera-list');
+    cameraDiv.innerHTML = "";
   const cameraList = getList();
   cameraList.forEach((camera) => {
     cameraUl = buildList(camera);
-    readingDiv.appendChild(cameraUl);
+    cameraDiv.appendChild(cameraUl);
   });
 
 }
