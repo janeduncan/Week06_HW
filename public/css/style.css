@@ -17,10 +17,6 @@ ul {
   list-style-type: square;
 }
 
-h1 {
-  text-align: center;
-}
-
 /* Form */
 
 .row:after {
@@ -104,10 +100,13 @@ input[type=submit]:hover {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 1.4em;
+    font-weight: bold;
+
 }
 
 .tab button.active {
     background-color: #419bf9;
+    color: #ffffff;
 }
 
 .tabcontent {
