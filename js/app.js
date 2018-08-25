@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const deleteButton = document.querySelector('#delete');
   deleteButton.addEventListener('click', handleDeleteButton);
 
+  document.getElementById("defaultOpen").click()
+
   renderList();
 });
 
