@@ -30,7 +30,7 @@ input[type=text], select {
     padding: 12px 210px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccccccß;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -56,13 +56,27 @@ input[type=submit] {
     background-color: #419bf9;
     color: #ffffff;
     padding: 12px 20px;
-    border-color: #ffffff;
+    border-color: #f2f2f2;
     border-radius: 6px;
     cursor: pointer;
     float: right;
 }
 
 input[type=submit]:hover {
+    background-color: #1b75d3;
+}
+
+input[type=button] {
+    background-color: #419bf9;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-color: #f2f2f2;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=button]:hover {
     background-color: #1b75d3;
 }
 

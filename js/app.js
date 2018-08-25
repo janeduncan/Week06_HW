@@ -1,8 +1,9 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-item-form');
   form.addEventListener('submit', handleFormSubmit);
+
+  const deleteButton = document.querySelector('#delete');
+  deleteButton.addEventListener('click', handleDeleteButton);
 
   renderList();
 });
@@ -34,6 +35,10 @@ const handleFormSubmit = function(event){
   renderList();
   event.target.reset();
 };
+
+const handleFormDelete = function(event){
+  localStorage.clear();
+}
 
 const buildList = function(camera){
   const cameraUl = document.createElement('ul');
@@ -72,6 +77,10 @@ const renderList = function(){
     readingDiv.appendChild(cameraUl);
   });
 
+}
+
+const handleDeleteButton = function(){
+  localStorage.clear();
 }
 
 function openForm(evt, forms) {
