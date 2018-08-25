@@ -3,41 +3,121 @@
   <head>
     <meta charset="utf-8">
     <title>Camera List App</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="public/css/style.css" />
     <script src="js/app.js"></script>
   </head>
   <body>
-    <form id="new-item-form">
-      <div id="form-wrapper">
-        <div class="form-item">
-          <label for="model" class="primary">Model</label>
-          <input type="text" id="model" required/>
-        </div>
+    <main>
 
-        <div class="form-item">
-          <label for="brand" class="primary">Brand</label>
-          <input type="text" id="brand" required/>
-        </div>
+      <center><img src="public/images/camera.jpg" height="212px" width="200px"></center>
 
-        <div class="form-item">
-          <label for="category" class="primary">Category</label>
-          <select id="category">
-            <option value="" disabled selected></option>
-            <option value="DSLR">DSLR</option>
-            <option value="Mirrorless">Compact System & Mirrorless</option>
-            <option value="Digital">Digital</option>
-            <option value="Medium Format">Medium Format</option>
-            <option value="Film">Film</option>
-          </select>
+      <div class="tab">
+        <button class="tablinks" onclick="openForm(event, 'Add')" id="defaultOpen" style="width:50%">Add a camera</button>
+        <button class="tablinks" onclick="openForm(event, 'View')" style="width:50%">Cameras</button>
+      </div>
+
+      <div id="Add" class="tabcontent"><br>
+        <form id="new-item-form">
+          <div class="box">
+          <div id="form-wrapper">
+            <div class="row">
+              <div class="col-30">
+                <label for="model" class="primary">Model:</label>
+              </div>
+              <div class="col-70">
+                <input type="text" id="model" required/>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="brand" class="primary">Brand:</label>
+              </div>
+              <div class="col-70">
+                <input type="text" id="brand" required/>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="category" class="primary">Category:</label>
+              </div>
+              <div class="col-70">
+                <select id="category">
+                  <option value="" disabled selected></option>
+                  <option value="DSLR">DSLR</option>
+                  <option value="Mirrorless">Compact System & Mirrorless</option>
+                  <option value="Digital">Digital</option>
+                  <option value="Medium Format">Medium Format</option>
+                  <option value="Film">Film</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="sensor" class="primary">Sensor format:</label>
+              </div>
+              <div class="col-70">
+                <select id="sensor">
+                  <option value="" disabled selected></option>
+                  <option value="Full frame">Full frame</option>
+                  <option value="APS-C">APS-C</option>
+                  <option value="APS-H">APS-H</option>
+                  <option value="Four Thirds">Four Thirds</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="lens" class="primary">Lens type:</label>
+              </div>
+              <div class="col-70">
+                <input type="radio" name="lens" value="Interchangeable" checked> Interchangeable
+                <input type="radio" name="lens" value="Built-in Zoom"> Built-in
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="flash" class="primary">Built-in flash:</label>
+              </div>
+              <div class="col-70">
+                <input type="radio" name="flash" value="Yes" checked> Yes
+                <input type="radio" name="flash" value="No"> No
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="price" class="primary">Price:</label>
+              </div>
+              <div class="col-70">
+                <input type="number" id="price" min="0" required/>
+              </div>
+            </div>
+          </div>
+
+          <input type="submit" value="Save"/><br><br>
+          </div>
+        </form><br>
+      </div>
+      </div>
+
+      <div id="View" class="tabcontent">
+        <div>
+            <h1>Camera List</h1>
+            <div id="camera-list"></div>
         </div>
       </div>
-      <input type="submit" value="save"/>
-    </form>
 
-    <h1>Camera List</h1>
-    <div id="camera-list"></div>
+    </main>
   </body>
 </html>
 
+<!-- This default tab 'Add a camera' wouldn't show up when I added the code below to the app.js file, so I had to put it here? -->
 
-<!-- Add radio button for movie mode or built in flash -->
+<script>
+  document.getElementById("defaultOpen").click();
+</script>

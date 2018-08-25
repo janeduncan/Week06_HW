@@ -1,0 +1,118 @@
+body {
+  font-family: sans-serif;
+  font-size: 85%;
+}
+
+main {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width:750px;
+    margin: auto;
+    margin-top: 20px;
+    clear: left;
+}
+
+ul {
+  list-style-type: square;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Form */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 210px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccccccß;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #419bf9;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #1b75d3;
+}
+
+.box {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-30 {
+    float: left;
+    width: 30%;
+}
+
+.col-70 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+}
+
+/* Tab */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 1.4em;
+}
+
+.tab button.active {
+    background-color: #419bf9;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
