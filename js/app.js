@@ -38,10 +38,6 @@ const handleFormSubmit = function(event){
   event.target.reset();
 };
 
-const handleFormDelete = function(event){
-  localStorage.clear();
-}
-
 const buildList = function(camera){
   const cameraUl = document.createElement('ul');
   const modelLi = document.createElement('li');
@@ -71,7 +67,7 @@ const buildList = function(camera){
 }
 
 const renderList = function(){
-    const cameraDiv = document.querySelector('#camera-list');
+  const cameraDiv = document.querySelector('#camera-list');
     cameraDiv.innerHTML = "";
   const cameraList = getList();
   cameraList.forEach((camera) => {
@@ -83,6 +79,7 @@ const renderList = function(){
 
 const handleDeleteButton = function(){
   localStorage.clear();
+  renderList();
 }
 
 function openForm(evt, forms) {
